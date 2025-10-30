@@ -6,11 +6,11 @@ title: Home
 ## 自己紹介
 
 <div class="right-align-content">
-  <p>このページは、僕 Haruto の個人サイトです。<br>
+  <p>このページは、僕 futon362 の個人サイトです。<br>
 主に、プログラミングに関することをまとめています。<br>
 プログラミングと数学や科学や物理が好きです。</p>
   <div class="author">
-  <p>Haruto</p>
+  <p>futon362</p>
   <img class="logo" src="assets/images/haruto.png" />
   </div>
 </div>
