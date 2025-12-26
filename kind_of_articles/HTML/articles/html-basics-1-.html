@@ -1,0 +1,151 @@
+---
+layout: default
+title: HTML Basics -1-
+---
+<h1>HTML入門 ① - 基本構造と主要タグ</h1>
+<p>この講座では、HTMLの基本的な構造とよく使われるタグについて学びます。<br />
+Webページの仕組みを理解するための最初の一歩です。</p>
+<hr />
+<h2>1. HTMLとは</h2>
+<ul>
+<li>Webページの構造を定義する言語  </li>
+<li>見た目ではなく、内容の意味と配置を記述する  </li>
+<li>ブラウザがHTMLを読み取り、画面に表示する</li>
+</ul>
+<hr />
+<h2>2. 最小のHTML構造</h2>
+<p>```html</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>はじめてのHTML</title>
+  </head>
+  <body>
+    <h1>Hello, HTML</h1>
+    <p>これは段落です。</p>
+  </body>
+</html>
+<p>```</p>
+<p>| タグ             | 説明                                     |
+|------------------|------------------------------------------|
+| <code>&lt;!DOCTYPE html&gt;</code>| HTML5であることを宣言する                |
+| <code>&lt;html&gt;</code>         | ページ全体を囲む                         |
+| <code>&lt;head&gt;</code>         | ページ情報（タイトルや設定）を記述       |
+| <code>&lt;title&gt;</code>        | タブに表示されるページ名                 |
+| <code>&lt;body&gt;</code>         | 実際に表示される内容を記述               |
+| <code>&lt;h1&gt;</code>           | 見出し（最も大きなタイトル）             |
+| <code>&lt;p&gt;</code>            | 段落（文章）                             |</p>
+<hr />
+<h2>3. よく使うタグ一覧</h2>
+<p>| タグ       | 用途             | 使用例                        |
+|------------|------------------|-------------------------------|
+| <code>&lt;h1&gt;</code>〜<code>&lt;h6&gt;</code> | 見出し         | <code>&lt;h2&gt;小見出し&lt;/h2&gt;</code>            |
+| <code>&lt;p&gt;</code>      | 段落             | <code>&lt;p&gt;文章です。&lt;/p&gt;</code>            |
+| <code>&lt;a&gt;</code>      | リンク           | <code>&lt;a href="URL"&gt;リンク&lt;/a&gt;</code>     |
+| <code>&lt;img&gt;</code>    | 画像             | <code>&lt;img src="画像URL" /&gt;</code>        |
+| <code>&lt;ul&gt;</code>     | 箇条書き（順不同）| <code>&lt;ul&gt;&lt;li&gt;項目&lt;/li&gt;&lt;/ul&gt;</code>       |
+| <code>&lt;ol&gt;</code>     | 箇条書き（順序あり）| <code>&lt;ol&gt;&lt;li&gt;項目&lt;/li&gt;&lt;/ol&gt;</code>     |
+| <code>&lt;div&gt;</code>    | 区切り・箱       | <code>&lt;div&gt;内容&lt;/div&gt;</code>              |
+| <code>&lt;span&gt;</code>   | インラインの装飾 | <code>&lt;span&gt;文字&lt;/span&gt;</code>            |
+| <code>&lt;br&gt;</code>     | 改行             | <code>文章&lt;br&gt;改行されます</code>         |</p>
+<hr />
+<h2>4. 画像の表示</h2>
+<p><code>html
+&lt;img src="https://haruto-ooki.github.io/assets/images/logo.png" alt="ページロゴ"&gt;</code></p>
+<p>結果</p>
+<p><img class="logo" src="../../../assets/images/logo.png" alt="ページロゴ"></p>
+<ul>
+<li><code>src</code>：画像のURL  </li>
+<li><code>alt</code>：画像が表示されないときの説明文  </li>
+<li><code>&lt;img&gt;</code> は閉じタグ不要（自己完結型）</li>
+</ul>
+<hr />
+<h2>5. リンクの作成</h2>
+<p><code>html
+&lt;a href="https://haruto-ooki.github.io"&gt;ホームページへ&lt;/a&gt;</code></p>
+<p>結果</p>
+<p><a href="https://haruto-ooki.github.io">ホームページへ</a></p>
+<ul>
+<li><code>href</code>：リンク先のURL  </li>
+<li><code>&lt;a&gt;</code>タグで囲んだテキストがクリック可能になる</li>
+</ul>
+<hr />
+<h2>6. 箇条書きリスト</h2>
+<h3>順不同リスト（ul）</h3>
+<p>```html</p>
+<ul>
+  <li>りんご</li>
+  <li>みかん</li>
+</ul>
+<p>```</p>
+<p>結果</p>
+<ul>
+<li>りんご</li>
+<li>みかん</li>
+</ul>
+<h3>順序付きリスト（ol）</h3>
+<p>```html</p>
+<ol>
+  <li>ステップ1</li>
+  <li>ステップ2</li>
+</ol>
+<p>```</p>
+<p>結果</p>
+<ol>
+<li>ステップ1</li>
+<li>ステップ2</li>
+</ol>
+<hr />
+<h2>7. ページの区切り</h2>
+<h3>div（ブロック）</h3>
+<p>```html</p>
+<div>
+  <h2>セクションタイトル</h2>
+  <p>この部分はひとまとまりです。</p>
+</div>
+<p>```</p>
+<p>結果</p>
+<h2>セクションタイトル</h2>
+<p>この部分はひとまとまりです。</p>
+<h3>span（インライン）</h3>
+<p>```html</p>
+<p>この文章の <span>一部だけ</span> を強調します。</p>
+<p>```</p>
+<p>結果</p>
+<p>この文章の <code>一部だけ</code> を強調します。</p>
+<hr />
+<h2>8. コメントの書き方</h2>
+<p>```html</p>
+<!-- これはコメントです -->
+<p>表示される文章</p>
+<p>```</p>
+<p>結果</p>
+<p>表示される文章</p>
+<ul>
+<li>コメントはブラウザに表示されない  </li>
+<li>メモや説明として使える</li>
+</ul>
+<hr />
+<h2>9. よくあるミスと注意点</h2>
+<h3>タグの閉じ忘れ</h3>
+<p>```html</p>
+<p>文章
+```
+
+- タグは必ず閉じる（例：`</p>
+<p>`）</p>
+<h3>属性の書き方ミス</h3>
+<p><code>html
+&lt;a href=https://example.com&gt;リンク&lt;/a&gt;  &lt;!-- x --&gt;</code></p>
+<ul>
+<li>属性値は「"」で囲む → <code>href="..."</code></li>
+</ul>
+<hr />
+<h2>10. 次のステップ</h2>
+<ul>
+<li>CSSで色やレイアウトを整える  </li>
+<li>フォーム（入力欄やボタン）の作成  </li>
+<li>レスポンシブデザイン（スマホ対応）  </li>
+<li>HTMLのアクセシビリティ  </li>
+<li>SEO（検索エンジン対策）</li>
+</ul>

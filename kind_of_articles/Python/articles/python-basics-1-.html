@@ -1,0 +1,212 @@
+---
+layout: default
+title: Python Basics -1-
+---
+<h1>Python入門 ① - 基本・変数・データ型</h1>
+<p>この講座では、Pythonの基本的な文法、変数の概念、主要なデータ型について学びます。初心者向けの内容です。</p>
+<hr />
+<h2>🐍 1. Pythonとは？</h2>
+<ul>
+<li>読みやすく、書きやすいプログラミング言語</li>
+<li>Scratchの次に学べる言語としても知られる</li>
+<li>Web開発、AI、データ分析などに使われる  </li>
+<li>無料で使えるオープンソース  </li>
+</ul>
+<hr />
+<h2>🧘 2. 最初のコード</h2>
+<p><code>python
+print("Hello, Python")</code></p>
+<ul>
+<li>
+<p>print() は画面に文字や数値を表示する関数</p>
+</li>
+<li>
+<p>実行すると <code>Hello, Python</code> が出力される</p>
+</li>
+</ul>
+<hr />
+<h2>🔢 3. 数値と演算</h2>
+<p><code>python
+print(2 + 3)    # 足し算
+print(10 - 4)   # 引き算
+print(5 * 6)    # 掛け算
+print(8 / 2)    # 割り算（float型になる）
+print(7 // 2)   # 商（整数）
+print(7 % 2)    # 余り
+print(2 ** 3)   # 累乗（2の3乗）</code></p>
+<hr />
+<h2>📦 4. 変数の基本</h2>
+<h3>変数とは？</h3>
+<ul>
+<li>
+<p>値を一時的に保存する「名前付きの箱」</p>
+</li>
+<li>
+<p><code>=</code> を使って代入する</p>
+</li>
+</ul>
+<p><code>python
+name = "Taro"
+age = 20
+print(name)
+print(age)</code></p>
+<h3>命名ルール</h3>
+<ul>
+<li>
+<p>英字、数字、アンダースコアが使える</p>
+</li>
+<li>
+<p>数字で始めてはいけない</p>
+</li>
+<li>
+<p>Pythonの予約語は使えない（例：print, if）</p>
+</li>
+</ul>
+<h3>代入と更新</h3>
+<p><code>python
+x = 10
+y = x
+x = x + 5
+print(x)  # 15
+print(y)  # 10</code></p>
+<h3>複数代入</h3>
+<p><code>python
+a, b, c = 1, 2, 3
+print(a, b, c)</code></p>
+<hr />
+<h2>🧠 5. データ型の基礎</h2>
+<p>主な型一覧：</p>
+<p>|型名     | 説明         | 例               |
+|--------|--------------|------------------|
+|int     | 整数          | 10, -3           |
+|float   | 小数          | 3.14, 2.0        |
+|str     | 文字列        | "Hello"          |
+|bool    | 真偽値        | True, False      |
+|list    | 順序付きの配列 | [1, 2, 3]        |
+|dict    | キーと値のペア | {"a": 1, "b": 2} |
+|tuple   | 変更不可の配列 | (1, 2)           |
+|set     | 重複なしの集合 | {1, 2, 3}        |</p>
+<hr />
+<h2>🔍 6. 各型の詳細（定義・構造・例え付き）</h2>
+<h3>int型（整数）</h3>
+<p>📘 定義：小数点のない「丸い数字」</p>
+<p>🪙 例え：硬貨の枚数、年齢、人数など「数えられるもの」</p>
+<p>🧩 構造：数字をそのまま書く</p>
+<p><code>python
+x = 100
+print(type(x))  # &lt;class 'int'&gt;</code></p>
+<hr />
+<h3>float型（小数）</h3>
+<p>📘 定義：小数点を含む数値</p>
+<p>🌊 例え：水の量（1.5リットル）、距離（3.14km）</p>
+<p>🧩 構造：数字に小数点をつける</p>
+<p><code>python
+y = 3.14
+print(type(y))  # &lt;class 'float'&gt;
+print(2 + 3.0)  # 5.0</code></p>
+<p>型変換と誤差の例：</p>
+<p>```python
+a = 10
+b = float(a)    # 10.0</p>
+<p>c = int(3.99)   # 3</p>
+<p>print(0.1 + 0.2)  # 0.30000000000000004</p>
+<p>from decimal import Decimal
+print(Decimal("0.1") + Decimal("0.2"))  # 0.3
+```</p>
+<hr />
+<h3>str型（文字列）</h3>
+<p>📘 定義：文字の並び</p>
+<p>🧵 例え：文章や単語をつなげた「糸」</p>
+<p>🧩 構造：ダブルクォート " " やシングルクォート ' ' で囲む</p>
+<p><code>python
+text = "Hello"
+print(text + " World")   # 結合
+print(text * 3)          # 繰り返し
+print(text[0])           # インデックス</code></p>
+<hr />
+<h3>bool型（真偽値）</h3>
+<p>📘 定義：真（True）か偽（False）</p>
+<p>🔌 例え：スイッチのON/OFF</p>
+<p>🧩 構造：True または False を直接書く</p>
+<p><code>python
+is_ok = True
+print(type(is_ok))  # &lt;class 'bool'&gt;
+print(5 &gt; 3)         # True
+print(2 == 4)        # False</code></p>
+<hr />
+<h3>list型（リスト）</h3>
+<p>📘 定義：複数の値を順番に並べて保存できる型</p>
+<p>📚 例え：買い物リストや本棚</p>
+<p>🧩 構造：角括弧 [] を使い、カンマ , で区切る</p>
+<p><code>python
+scores = [80, 90, 70]
+print(scores[1])         # 90
+scores.append(100)       # 追加
+scores.remove(70)        # 削除
+print(len(scores))       # 要素数</code></p>
+<hr />
+<h3>dict型（辞書）</h3>
+<p>📘 定義：キーと値のペアで情報を保存する型</p>
+<p>🗂️ 例え：名前と電話番号がセットになった電話帳</p>
+<p>🧩 構造：波括弧 {} を使い、キー: 値 のペアをカンマ , で区切る</p>
+<p>```python
+user = {"name": "Taro", "age": 20}
+print(user["name"])  # Taro</p>
+<p>user["age"] = 21
+user["gender"] = "M"
+```</p>
+<hr />
+<h3>tuple型（タプル）</h3>
+<p>📘 定義：変更できないリストのような型</p>
+<p>📦 例え：座標 (x, y) や固定された設定値</p>
+<p>🧩 構造：丸括弧 () を使い、カンマ , で区切る</p>
+<p><code>python
+point = (10, 20)
+print(point[0])  # 10</code></p>
+<hr />
+<h3>set型（集合）</h3>
+<p>📘 定義：重複のない値の集まり</p>
+<p>🎲 例え：ユニークなタグやサイコロの出目</p>
+<p>🧩 構造：波括弧 {} を使い、カンマ , で区切る（重複は除外）</p>
+<p>```python
+nums = {1, 2, 3, 2}
+print(nums)  # {1, 2, 3}</p>
+<p>a = {1, 2, 3}
+b = {3, 4, 5}
+print(a | b)  # 和集合
+print(a &amp; b)  # 積集合
+print(a - b)  # 差集合
+```</p>
+<hr />
+<h2>🧪 7. 型の確認と変換</h2>
+<p>```python
+print(type(100))         # <class 'int'>
+print(type("abc"))       # <class 'str'>
+print(type([1, 2, 3]))    # <class 'list'></p>
+<p>x = str(123)             # "123"
+y = int("456")           # 456
+z = float("7.89")        # 7.89
+```</p>
+<hr />
+<h2>📝 8. コメントの書き方</h2>
+<p>```python</p>
+<h1>これはコメントです</h1>
+<p>print("テスト")  # この行の右側にもコメントを書ける
+```</p>
+<hr />
+<h2>⚠️ 9. エラーの例</h2>
+<p><code>python
+print("Hello"  # 括弧が閉じていない</code></p>
+<p>出力：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p"><font color="red">SyntaxError: unexpected EOF while parsing</font></span></code></pre></div></div>
+
+<hr />
+<h2>🚀 10. 次に学ぶこと</h2>
+<ul>
+<li>
+<p>条件分岐（if文）</p>
+</li>
+<li>
+<p>繰り返し（for文、while</p>
+</li>
+</ul>
