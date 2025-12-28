@@ -2,150 +2,197 @@
 layout: default
 title: HTML Basics -1-
 ---
+
 <h1>HTML入門 ① - 基本構造と主要タグ</h1>
-<p>この講座では、HTMLの基本的な構造とよく使われるタグについて学びます。<br />
-Webページの仕組みを理解するための最初の一歩です。</p>
-<hr />
+
+<p>この講座では、HTMLの基本的な構造とよく使われるタグについて学びます。</p>
+<p>Webページの仕組みを理解するための最初の一歩です。</p>
+
+<hr>
+
 <h2>1. HTMLとは</h2>
+
 <ul>
-<li>Webページの構造を定義する言語  </li>
-<li>見た目ではなく、内容の意味と配置を記述する  </li>
-<li>ブラウザがHTMLを読み取り、画面に表示する</li>
+  <li>Webページの構造を定義する言語</li>
+  <li>見た目ではなく、内容の意味と配置を記述する</li>
+  <li>ブラウザがHTMLを読み取り、画面に表示する</li>
 </ul>
-<hr />
+
+<hr>
+
 <h2>2. 最小のHTML構造</h2>
-<p>```html</p>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>はじめてのHTML</title>
-  </head>
-  <body>
-    <h1>Hello, HTML</h1>
-    <p>これは段落です。</p>
-  </body>
-</html>
-<p>```</p>
-<p>| タグ             | 説明                                     |
-|------------------|------------------------------------------|
-| <code>&lt;!DOCTYPE html&gt;</code>| HTML5であることを宣言する                |
-| <code>&lt;html&gt;</code>         | ページ全体を囲む                         |
-| <code>&lt;head&gt;</code>         | ページ情報（タイトルや設定）を記述       |
-| <code>&lt;title&gt;</code>        | タブに表示されるページ名                 |
-| <code>&lt;body&gt;</code>         | 実際に表示される内容を記述               |
-| <code>&lt;h1&gt;</code>           | 見出し（最も大きなタイトル）             |
-| <code>&lt;p&gt;</code>            | 段落（文章）                             |</p>
-<hr />
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;はじめてのHTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, HTML&lt;/h1&gt;
+    &lt;p&gt;これは段落です。&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<table>
+  <tr><th>タグ</th><th>説明</th></tr>
+  <tr><td><code>&lt;!DOCTYPE html&gt;</code></td><td>HTML5であることを宣言する</td></tr>
+  <tr><td><code>&lt;html&gt;</code></td><td>ページ全体を囲む</td></tr>
+  <tr><td><code>&lt;head&gt;</code></td><td>ページ情報（タイトルや設定）を記述</td></tr>
+  <tr><td><code>&lt;title&gt;</code></td><td>タブに表示されるページ名</td></tr>
+  <tr><td><code>&lt;body&gt;</code></td><td>実際に表示される内容を記述</td></tr>
+  <tr><td><code>&lt;h1&gt;</code></td><td>見出し（最も大きなタイトル）</td></tr>
+  <tr><td><code>&lt;p&gt;</code></td><td>段落（文章）</td></tr>
+</table>
+
+<hr>
+
 <h2>3. よく使うタグ一覧</h2>
-<p>| タグ       | 用途             | 使用例                        |
-|------------|------------------|-------------------------------|
-| <code>&lt;h1&gt;</code>〜<code>&lt;h6&gt;</code> | 見出し         | <code>&lt;h2&gt;小見出し&lt;/h2&gt;</code>            |
-| <code>&lt;p&gt;</code>      | 段落             | <code>&lt;p&gt;文章です。&lt;/p&gt;</code>            |
-| <code>&lt;a&gt;</code>      | リンク           | <code>&lt;a href="URL"&gt;リンク&lt;/a&gt;</code>     |
-| <code>&lt;img&gt;</code>    | 画像             | <code>&lt;img src="画像URL" /&gt;</code>        |
-| <code>&lt;ul&gt;</code>     | 箇条書き（順不同）| <code>&lt;ul&gt;&lt;li&gt;項目&lt;/li&gt;&lt;/ul&gt;</code>       |
-| <code>&lt;ol&gt;</code>     | 箇条書き（順序あり）| <code>&lt;ol&gt;&lt;li&gt;項目&lt;/li&gt;&lt;/ol&gt;</code>     |
-| <code>&lt;div&gt;</code>    | 区切り・箱       | <code>&lt;div&gt;内容&lt;/div&gt;</code>              |
-| <code>&lt;span&gt;</code>   | インラインの装飾 | <code>&lt;span&gt;文字&lt;/span&gt;</code>            |
-| <code>&lt;br&gt;</code>     | 改行             | <code>文章&lt;br&gt;改行されます</code>         |</p>
-<hr />
+
+<table>
+  <tr><th>タグ</th><th>用途</th><th>使用例</th></tr>
+  <tr><td><code>&lt;h1&gt;</code>〜<code>&lt;h6&gt;</code></td><td>見出し</td><td><code>&lt;h2&gt;小見出し&lt;/h2&gt;</code></td></tr>
+  <tr><td><code>&lt;p&gt;</code></td><td>段落</td><td><code>&lt;p&gt;文章です。&lt;/p&gt;</code></td></tr>
+  <tr><td><code>&lt;a&gt;</code></td><td>リンク</td><td><code>&lt;a href="URL"&gt;リンク&lt;/a&gt;</code></td></tr>
+  <tr><td><code>&lt;img&gt;</code></td><td>画像</td><td><code>&lt;img src="画像URL" /&gt;</code></td></tr>
+  <tr><td><code>&lt;ul&gt;</code></td><td>箇条書き（順不同）</td><td><code>&lt;ul&gt;&lt;li&gt;項目&lt;/li&gt;&lt;/ul&gt;</code></td></tr>
+  <tr><td><code>&lt;ol&gt;</code></td><td>箇条書き（順序あり）</td><td><code>&lt;ol&gt;&lt;li&gt;項目&lt;/li&gt;&lt;/ol&gt;</code></td></tr>
+  <tr><td><code>&lt;div&gt;</code></td><td>区切り・箱</td><td><code>&lt;div&gt;内容&lt;/div&gt;</code></td></tr>
+  <tr><td><code>&lt;span&gt;</code></td><td>インラインの装飾</td><td><code>&lt;span&gt;文字&lt;/span&gt;</code></td></tr>
+  <tr><td><code>&lt;br&gt;</code></td><td>改行</td><td><code>文章&lt;br&gt;改行されます</code></td></tr>
+</table>
+
+<hr>
+
 <h2>4. 画像の表示</h2>
-<p><code>html
-&lt;img src="https://haruto-ooki.github.io/assets/images/logo.png" alt="ページロゴ"&gt;</code></p>
+
+<pre><code>&lt;img src="https://haruto-ooki.github.io/assets/images/logo.png" alt="ページロゴ"&gt;
+</code></pre>
+
 <p>結果</p>
 <p><img class="logo" src="../../../assets/images/logo.png" alt="ページロゴ"></p>
+
 <ul>
-<li><code>src</code>：画像のURL  </li>
-<li><code>alt</code>：画像が表示されないときの説明文  </li>
-<li><code>&lt;img&gt;</code> は閉じタグ不要（自己完結型）</li>
+  <li><code>src</code>：画像のURL</li>
+  <li><code>alt</code>：画像が表示されないときの説明文</li>
+  <li><code>&lt;img&gt;</code> は閉じタグ不要（自己完結型）</li>
 </ul>
-<hr />
+
+<hr>
+
 <h2>5. リンクの作成</h2>
-<p><code>html
-&lt;a href="https://haruto-ooki.github.io"&gt;ホームページへ&lt;/a&gt;</code></p>
+
+<pre><code>&lt;a href="https://haruto-ooki.github.io"&gt;ホームページへ&lt;/a&gt;
+</code></pre>
+
 <p>結果</p>
 <p><a href="https://haruto-ooki.github.io">ホームページへ</a></p>
+
 <ul>
-<li><code>href</code>：リンク先のURL  </li>
-<li><code>&lt;a&gt;</code>タグで囲んだテキストがクリック可能になる</li>
+  <li><code>href</code>：リンク先のURL</li>
+  <li><code>&lt;a&gt;</code>タグで囲んだテキストがクリック可能になる</li>
 </ul>
-<hr />
+
+<hr>
+
 <h2>6. 箇条書きリスト</h2>
+
 <h3>順不同リスト（ul）</h3>
-<p>```html</p>
+
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;りんご&lt;/li&gt;
+  &lt;li&gt;みかん&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>結果</p>
 <ul>
   <li>りんご</li>
   <li>みかん</li>
 </ul>
-<p>```</p>
-<p>結果</p>
-<ul>
-<li>りんご</li>
-<li>みかん</li>
-</ul>
+
 <h3>順序付きリスト（ol）</h3>
-<p>```html</p>
+
+<pre><code>&lt;ol&gt;
+  &lt;li&gt;ステップ1&lt;/li&gt;
+  &lt;li&gt;ステップ2&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<p>結果</p>
 <ol>
   <li>ステップ1</li>
   <li>ステップ2</li>
 </ol>
-<p>```</p>
-<p>結果</p>
-<ol>
-<li>ステップ1</li>
-<li>ステップ2</li>
-</ol>
-<hr />
+
+<hr>
+
 <h2>7. ページの区切り</h2>
+
 <h3>div（ブロック）</h3>
-<p>```html</p>
-<div>
-  <h2>セクションタイトル</h2>
-  <p>この部分はひとまとまりです。</p>
-</div>
-<p>```</p>
+
+<pre><code>&lt;div&gt;
+  &lt;h2&gt;セクションタイトル&lt;/h2&gt;
+  &lt;p&gt;この部分はひとまとまりです。&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
 <p>結果</p>
 <h2>セクションタイトル</h2>
 <p>この部分はひとまとまりです。</p>
-<h3>span（インライン）</h3>
-<p>```html</p>
-<p>この文章の <span>一部だけ</span> を強調します。</p>
-<p>```</p>
-<p>結果</p>
-<p>この文章の <code>一部だけ</code> を強調します。</p>
-<hr />
-<h2>8. コメントの書き方</h2>
-<p>```html</p>
-<!-- これはコメントです -->
-<p>表示される文章</p>
-<p>```</p>
-<p>結果</p>
-<p>表示される文章</p>
-<ul>
-<li>コメントはブラウザに表示されない  </li>
-<li>メモや説明として使える</li>
-</ul>
-<hr />
-<h2>9. よくあるミスと注意点</h2>
-<h3>タグの閉じ忘れ</h3>
-<p>```html</p>
-<p>文章
-```
 
-- タグは必ず閉じる（例：`</p>
-<p>`）</p>
-<h3>属性の書き方ミス</h3>
-<p><code>html
-&lt;a href=https://example.com&gt;リンク&lt;/a&gt;  &lt;!-- x --&gt;</code></p>
+<h3>span（インライン）</h3>
+
+<pre><code>&lt;p&gt;この文章の &lt;span&gt;一部だけ&lt;/span&gt; を強調します。&lt;/p&gt;
+</code></pre>
+
+<p>結果</p>
+<p>この文章の <span>一部だけ</span> を強調します。</p>
+
+<hr>
+
+<h2>8. コメントの書き方</h2>
+
+<pre><code>&lt;!-- これはコメントです --&gt;
+&lt;p&gt;表示される文章&lt;/p&gt;
+</code></pre>
+
+<p>結果</p>
+<p>表示される文章</p>
+
 <ul>
-<li>属性値は「"」で囲む → <code>href="..."</code></li>
+  <li>コメントはブラウザに表示されない</li>
+  <li>メモや説明として使える</li>
 </ul>
-<hr />
-<h2>10. 次のステップ</h2>
+
+<hr>
+
+<h2>9. よくあるミスと注意点</h2>
+
+<h3>タグの閉じ忘れ</h3>
+
+<pre><code>&lt;p&gt;文章&lt;/p&gt;
+</code></pre>
+
+<p>タグは必ず閉じる（例：<code>&lt;/p&gt;</code>）</p>
+
+<h3>属性の書き方ミス</h3>
+
+<pre><code>&lt;a href=https://example.com&gt;リンク&lt;/a&gt;  &lt;!-- x --&gt;
+</code></pre>
+
 <ul>
-<li>CSSで色やレイアウトを整える  </li>
-<li>フォーム（入力欄やボタン）の作成  </li>
-<li>レスポンシブデザイン（スマホ対応）  </li>
-<li>HTMLのアクセシビリティ  </li>
-<li>SEO（検索エンジン対策）</li>
+  <li>属性値は「"」で囲む → <code>href="..."</code></li>
+</ul>
+
+<hr>
+
+<h2>10. 次のステップ</h2>
+
+<ul>
+  <li>CSSで色やレイアウトを整える</li>
+  <li>フォーム（入力欄やボタン）の作成</li>
+  <li>レスポンシブデザイン（スマホ対応）</li>
+  <li>HTMLのアクセシビリティ</li>
+  <li>SEO（検索エンジン対策）</li>
 </ul>
