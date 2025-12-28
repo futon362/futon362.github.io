@@ -22,7 +22,9 @@ title: HTML Basics -1-
 
 <h2>2. 最小のHTML構造</h2>
 
-<pre><code>&lt;!DOCTYPE html&gt;
+<div class="language-html highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;はじめてのHTML&lt;/title&gt;
@@ -33,6 +35,8 @@ title: HTML Basics -1-
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
+  </div>
+</div>
 
 <table>
   <tr><th>タグ</th><th>説明</th></tr>
@@ -66,8 +70,12 @@ title: HTML Basics -1-
 
 <h2>4. 画像の表示</h2>
 
-<pre><code>&lt;img src="https://haruto-ooki.github.io/assets/images/logo.png" alt="ページロゴ"&gt;
+<div class="language-html highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>&lt;img src="https://haruto-ooki.github.io/assets/images/logo.png" alt="ページロゴ"&gt;
 </code></pre>
+  </div>
+</div>
 
 <p>結果</p>
 <p><img class="logo" src="../../../assets/images/logo.png" alt="ページロゴ"></p>
@@ -82,8 +90,12 @@ title: HTML Basics -1-
 
 <h2>5. リンクの作成</h2>
 
-<pre><code>&lt;a href="https://haruto-ooki.github.io"&gt;ホームページへ&lt;/a&gt;
+<div class="language-html highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>&lt;a href="https://haruto-ooki.github.io"&gt;ホームページへ&lt;/a&gt;
 </code></pre>
+  </div>
+</div>
 
 <p>結果</p>
 <p><a href="https://haruto-ooki.github.io">ホームページへ</a></p>
@@ -99,11 +111,15 @@ title: HTML Basics -1-
 
 <h3>順不同リスト（ul）</h3>
 
-<pre><code>&lt;ul&gt;
+<div class="language-html highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>&lt;ul&gt;
   &lt;li&gt;りんご&lt;/li&gt;
   &lt;li&gt;みかん&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
+  </div>
+</div>
 
 <p>結果</p>
 <ul>
@@ -113,11 +129,15 @@ title: HTML Basics -1-
 
 <h3>順序付きリスト（ol）</h3>
 
-<pre><code>&lt;ol&gt;
+<div class="language-html highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>&lt;ol&gt;
   &lt;li&gt;ステップ1&lt;/li&gt;
   &lt;li&gt;ステップ2&lt;/li&gt;
 &lt;/ol&gt;
 </code></pre>
+  </div>
+</div>
 
 <p>結果</p>
 <ol>
@@ -131,11 +151,15 @@ title: HTML Basics -1-
 
 <h3>div（ブロック）</h3>
 
-<pre><code>&lt;div&gt;
+<div class="language-html highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>&lt;div&gt;
   &lt;h2&gt;セクションタイトル&lt;/h2&gt;
   &lt;p&gt;この部分はひとまとまりです。&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
+  </div>
+</div>
 
 <p>結果</p>
 <h2>セクションタイトル</h2>
@@ -143,8 +167,12 @@ title: HTML Basics -1-
 
 <h3>span（インライン）</h3>
 
-<pre><code>&lt;p&gt;この文章の &lt;span&gt;一部だけ&lt;/span&gt; を強調します。&lt;/p&gt;
+<div class="language-html highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>&lt;p&gt;この文章の &lt;span&gt;一部だけ&lt;/span&gt; を強調します。&lt;/p&gt;
 </code></pre>
+  </div>
+</div>
 
 <p>結果</p>
 <p>この文章の <span>一部だけ</span> を強調します。</p>
@@ -153,9 +181,13 @@ title: HTML Basics -1-
 
 <h2>8. コメントの書き方</h2>
 
-<pre><code>&lt;!-- これはコメントです --&gt;
+<div class="language-html highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>&lt;!-- これはコメントです --&gt;
 &lt;p&gt;表示される文章&lt;/p&gt;
 </code></pre>
+  </div>
+</div>
 
 <p>結果</p>
 <p>表示される文章</p>
@@ -171,15 +203,23 @@ title: HTML Basics -1-
 
 <h3>タグの閉じ忘れ</h3>
 
-<pre><code>&lt;p&gt;文章&lt;/p&gt;
+<div class="language-html highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>&lt;p&gt;文章&lt;/p&gt;
 </code></pre>
+  </div>
+</div>
 
 <p>タグは必ず閉じる（例：<code>&lt;/p&gt;</code>）</p>
 
 <h3>属性の書き方ミス</h3>
 
-<pre><code>&lt;a href=https://example.com&gt;リンク&lt;/a&gt;  &lt;!-- x --&gt;
+<div class="language-html highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>&lt;a href=https://example.com&gt;リンク&lt;/a&gt;  &lt;!-- x --&gt;
 </code></pre>
+  </div>
+</div>
 
 <ul>
   <li>属性値は「"」で囲む → <code>href="..."</code></li>
