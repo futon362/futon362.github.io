@@ -28,12 +28,13 @@ title: HTML Basics -1-
   <head>
     <title>はじめてのHTML</title>
   </head>
-  <body></body>
+  <body>
     <h1>Hello, HTML</h1>
     <p>これは段落です。</p>
-</body>
+  </body>
 </html>
 {% endhighlight %}
+
 <table>
   <tr><th>タグ</th><th>説明</th></tr>
   <tr><td><code>&lt;!DOCTYPE html&gt;</code></td><td>HTML5であることを宣言する</td></tr>
@@ -66,12 +67,9 @@ title: HTML Basics -1-
 
 <h2>4. 画像の表示</h2>
 
-<div class="language-html highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>&lt;img src="https://haruto-ooki.github.io/assets/images/logo.png" alt="ページロゴ"&gt;
-</code></pre>
-  </div>
-</div>
+{% highlight html %}
+<img src="https://haruto-ooki.github.io/assets/images/logo.png" alt="ページロゴ">
+{% endhighlight %}
 
 <p>結果</p>
 <p><img class="logo" src="../../../assets/images/logo.png" alt="ページロゴ"></p>
@@ -86,12 +84,9 @@ title: HTML Basics -1-
 
 <h2>5. リンクの作成</h2>
 
-<div class="language-html highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>&lt;a href="https://haruto-ooki.github.io"&gt;ホームページへ&lt;/a&gt;
-</code></pre>
-  </div>
-</div>
+{% highlight html %}
+<a href="https://haruto-ooki.github.io">ホームページへ</a>
+{% endhighlight %}
 
 <p>結果</p>
 <p><a href="https://haruto-ooki.github.io">ホームページへ</a></p>
@@ -107,15 +102,12 @@ title: HTML Basics -1-
 
 <h3>順不同リスト（ul）</h3>
 
-<div class="language-html highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>&lt;ul&gt;
-  &lt;li&gt;りんご&lt;/li&gt;
-  &lt;li&gt;みかん&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
-  </div>
-</div>
+{% highlight html %}
+<ul>
+  <li>りんご</li>
+  <li>みかん</li>
+</ul>
+{% endhighlight %}
 
 <p>結果</p>
 <ul>
@@ -125,15 +117,12 @@ title: HTML Basics -1-
 
 <h3>順序付きリスト（ol）</h3>
 
-<div class="language-html highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>&lt;ol&gt;
-  &lt;li&gt;ステップ1&lt;/li&gt;
-  &lt;li&gt;ステップ2&lt;/li&gt;
-&lt;/ol&gt;
-</code></pre>
-  </div>
-</div>
+{% highlight html %}
+<ol>
+  <li>ステップ1</li>
+  <li>ステップ2</li>
+</ol>
+{% endhighlight %}
 
 <p>結果</p>
 <ol>
@@ -147,15 +136,12 @@ title: HTML Basics -1-
 
 <h3>div（ブロック）</h3>
 
-<div class="language-html highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>&lt;div&gt;
-  &lt;h2&gt;セクションタイトル&lt;/h2&gt;
-  &lt;p&gt;この部分はひとまとまりです。&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
-  </div>
+{% highlight html %}
+<div>
+  <h2>セクションタイトル</h2>
+  <p>この部分はひとまとまりです。</p>
 </div>
+{% endhighlight %}
 
 <p>結果</p>
 <h2>セクションタイトル</h2>
@@ -163,12 +149,9 @@ title: HTML Basics -1-
 
 <h3>span（インライン）</h3>
 
-<div class="language-html highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>&lt;p&gt;この文章の &lt;span&gt;一部だけ&lt;/span&gt; を強調します。&lt;/p&gt;
-</code></pre>
-  </div>
-</div>
+{% highlight html %}
+<p>この文章の <span>一部だけ</span> を強調します。</p>
+{% endhighlight %}
 
 <p>結果</p>
 <p>この文章の <span>一部だけ</span> を強調します。</p>
@@ -177,13 +160,10 @@ title: HTML Basics -1-
 
 <h2>8. コメントの書き方</h2>
 
-<div class="language-html highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>&lt;!-- これはコメントです --&gt;
-&lt;p&gt;表示される文章&lt;/p&gt;
-</code></pre>
-  </div>
-</div>
+{% highlight html %}
+<!-- これはコメントです -->
+<p>表示される文章</p>
+{% endhighlight %}
 
 <p>結果</p>
 <p>表示される文章</p>
@@ -199,23 +179,17 @@ title: HTML Basics -1-
 
 <h3>タグの閉じ忘れ</h3>
 
-<div class="language-html highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>&lt;p&gt;文章&lt;/p&gt;
-</code></pre>
-  </div>
-</div>
+{% highlight html %}
+<p>文章</p>
+{% endhighlight %}
 
 <p>タグは必ず閉じる（例：<code>&lt;/p&gt;</code>）</p>
 
 <h3>属性の書き方ミス</h3>
 
-<div class="language-html highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>&lt;a href=https://example.com&gt;リンク&lt;/a&gt;  &lt;!-- x --&gt;
-</code></pre>
-  </div>
-</div>
+{% highlight html %}
+<a href=https://example.com>リンク</a>  <!-- x -->
+{% endhighlight %}
 
 <ul>
   <li>属性値は「"」で囲む → <code>href="..."</code></li>
