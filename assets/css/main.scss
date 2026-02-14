@@ -1,22 +1,19 @@
 ---
-
 ---
 
+/* 1. Minimaのコアファイルを順番通りに読み込む */
 @import "minima/initialize";
 @import "minima/base";
 @import "minima/layout";
 @import "minima/syntax-highlighting";
 
-/* ==========================================================================
-   1. レイアウトの書き換え（右側の余白を消す）
-   ========================================================================== */
+/* 2. レイアウトの書き換え（右側の余白を消す） */
 
 .wrapper {
-  // 本家の 800px 制限を解除し、画面横幅いっぱい（端に30pxの余裕）に広げる
   max-width: -webkit-calc(100% - (30px * 2)) !important;
   max-width: calc(100% - (30px * 2)) !important;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
 
 @media screen and (max-width: 800px) {
@@ -26,89 +23,87 @@
   }
 }
 
-/* ==========================================================================
-   2. あなたのカスタム・スタイル（本家を上書き）
-   ========================================================================== */
+/* 3. あなたのカスタム・スタイル（!importantを追加して確実に上書き） */
 
 body {
-  line-height: 1.8; // 本家の 1.5 を上書き
-  font-family: "Helvetica Neue", sans-serif; // フォントの優先順位を変更
-  color: #333; // 本家の #111 を少し柔らかい黒に
+  line-height: 1.8 !important;
+  font-family: "Helvetica Neue", sans-serif !important;
+  color: #333 !important;
 }
 
 h1, h2, h3 {
-  font-weight: 500;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  font-weight: 500 !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.5em !important;
 }
 
 ul {
-  padding-left: 1.2em; // 本家の 30px 指定にあなたの好みを適用
+  padding-left: 1.2em !important;
 }
 
 code {
-  background-color: #f5f5f5; // 本家の #eef を上書き
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  font-size: 0.95em;
+  background-color: #f5f5f5 !important;
+  padding: 0.2em 0.4em !important;
+  border-radius: 4px !important;
+  font-size: 0.95em !important;
 }
 
 hr {
-  border: none;
-  border-top: 1px solid #e0e0e0; // 本家より少し明るい線に
-  margin: 2em 0;
+  border: none !important;
+  border-top: 1px solid #e0e0e0 !important;
+  margin: 2em 0 !important;
 }
 
-/* 独自のクラス設定 */
 .rule-note {
-  color: #999999;
-  font-style: italic;
-  text-align: center;
-  margin-top: 2em;
+  color: #999999 !important;
+  font-style: italic !important;
+  text-align: center !important;
+  margin-top: 2em !important;
 }
 
 .trigger {
-  display: none !important; // ナビゲーションを隠す設定
+  display: none !important;
 }
 
 img.emoji {
-  width: 5%;
-  height: auto;
-  vertical-align: -0.25em;
+  width: 5% !important;
+  height: auto !important;
+  vertical-align: -0.25em !important;
 }
 
 img.logo {
-  width: 20%;
-  height: auto;
-  vertical-align: -0.25em;
+  width: 20% !important;
+  height: auto !important;
+  vertical-align: -0.25em !important;
 }
 
 input {
-  width: 100%;
-  padding: 0.6em;
-  font-size: 1.2em;
-  background: #FFF;
-  color: #333; 
-  border: 1px solid #555;
-  border-radius: 4px;
+  width: 100% !important;
+  padding: 0.6em !important;
+  font-size: 1.2em !important;
+  background: #FFF !important;
+  color: #333 !important; 
+  border: 1px solid #555 !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
 }
 
 .output {
-  margin-top: 2em;
-  font-size: 1.6em;
+  margin-top: 2em !important;
+  font-size: 1.6em !important;
 }
 
 .right-align-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1em;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 1em !important;
 }
 
 .right-align-content .author {
-  display: block;
-  text-align: right;
-  width: fit-content;
-  min-width: 50px;
-  max-width: 300px;
+  display: block !important;
+  text-align: right !important;
+  width: fit-content !important;
+  min-width: 50px !important;
+  max-width: 300px !important;
 }
