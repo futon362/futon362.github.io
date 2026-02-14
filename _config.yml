@@ -1,8 +1,14 @@
 title: Haruto's Page
-# theme: minima  <-- ここをコメントアウト（または削除）
+# theme ではなく remote_theme を使い、明示的に minima を指定します
+remote_theme: jekyll/minima
 
+# ナビゲーションリンクを生成しない
 header_pages: []
+
+# Markdown設定
 markdown: kramdown
+
+# プラグイン
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
