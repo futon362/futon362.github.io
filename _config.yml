@@ -6,6 +6,10 @@ header_pages: []
 # Markdown設定
 markdown: kramdown
 
+# _config.yml に追記
+kramdown:
+  syntax_highlighter: rouge
+
 # プラグイン
 plugins:
   - jekyll-feed
