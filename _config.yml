@@ -10,6 +10,7 @@ markdown: kramdown
 
 # プラグイン
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
   - jemoji

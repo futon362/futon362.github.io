@@ -2,7 +2,10 @@
 
 ---
 
-@import "minima"; // 本家Minimaのスタイルをすべて継承
+@import "minima/initialize";
+@import "minima/base";
+@import "minima/layout";
+@import "minima/syntax-highlighting";
 
 /* ==========================================================================
    1. レイアウトの書き換え（右側の余白を消す）
