@@ -83,9 +83,9 @@ input {
 .author {
   text-align: center !important;           /* 名前と画像をセンター合わせ */
   flex-shrink: 0 !important;               /* 画像が潰れないようにする */
-  border-radius: 20px;
-  border-color: #000;
-  border-width: auto;
+  border-radius: 20px !important;
+  border-color: #000 !important;
+  border-width: auto !important;
 }
 
 .logo {
