@@ -1,8 +1,4 @@
-/* ---
-   このファイルは普通のCSSとして扱います。フロントマター(---)は不要です。
-   --- */
-
-/* 1. Minima 本家の基本スタイルを直接記述 */
+/* 1. Minima 本家の基本スタイル */
 body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,dl,dd,ol,ul,figure{margin:0;padding:0}
 body{font:400 16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#111;background-color:#fdfdfd;display:flex;min-height:100vh;flex-direction:column}
 h1,h2,h3,h4,h5,h6,p,blockquote,pre,ul,ol,dl,figure{margin-bottom:15px}
@@ -18,7 +14,7 @@ a:hover{color:#111;text-decoration:underline}
 .page-content{padding:30px 0;flex:1}
 .site-footer{border-top:1px solid #e8e8e8;padding:30px 0}
 
-/* 2. あなたのカスタム（!importantで確実に適用） */
+/* 2. カスタム・レイアウト */
 .wrapper {
   max-width: calc(100% - 60px) !important;
   margin-right: auto !important;
@@ -32,6 +28,11 @@ a:hover{color:#111;text-decoration:underline}
     max-width: calc(100% - 30px) !important;
     padding-right: 15px !important;
     padding-left: 15px !important;
+  }
+  /* スマホの時は縦に並べる（ロゴを下に持ってくる） */
+  .right-align-content {
+    flex-direction: column !important;
+    text-align: center !important;
   }
 }
 
@@ -49,112 +50,34 @@ h1, h2, h3 {
 
 ul { padding-left: 1.2em !important; }
 
-code {
-  background-color: #f5f5f5 !important;
-  padding: 0.2em 0.4em !important;
-  border-radius: 4px !important;
-  font-size: 0.95em !important;
-}
-
-hr {
-  border: none !important;
-  border-top: 1px solid #e0e0e0 !important;
-  margin: 2em 0 !important;
-}
-
-.trigger { display: none !important; }
-
-input {
-  width: 100% !important;
-  padding: 0.6em !important;
-  font-size: 1.2em !important;
-  border: 1px solid #555 !important;
-  border-radius: 4px !important;
-  box-sizing: border-box !important;
-}
-
+/* 3. 自己紹介セクション（ロゴとテキスト） */
 .right-align-content {
   display: flex !important;
-  justify-content: space-between !important; /* 両端に分ける */
-  align-items: center !important;          /* 上下中央揃え */
-  gap: 20px !important;                    /* 文字と画像の間の隙間 */
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 20px !important;
+  margin: 20px 0 !important;
 }
 
 .author {
-  text-align: center !important;           /* 名前と画像をセンター合わせ */
-  flex-shrink: 0 !important;               /* 画像が潰れないようにする */
-  border-radius: 20px !important;
-  border-color: #000 !important;
-  border-width: auto !important;
+  text-align: center !important;
+  flex-shrink: 0 !important;
+  padding: 15px !important;
+  border: 1px solid #e0e0e0 !important; /* 線の色と太さを指定 */
+  border-radius: 15px !important;        /* 角を丸く */
+  background-color: #fff !important;    /* 背景を白にして線を見やすく */
+  min-width: 120px !important;
 }
 
 .logo {
-  width: 100px !important;                 /* サイズはお好みで */
+  width: 100px !important;
   height: auto !important;
-  border-radius: 50%;                      /* 丸くしたい場合は追加 */
+  border-radius: 50% !important;        /* 画像を丸く */
+  display: block !important;
+  margin: 0 auto !important;
 }
 
-/* --- SECTION 3: Syntax Highlighting (Rouge) --- */
-.highlight .c { color: #998; font-style: italic } /* Comment */
-.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
-.highlight .k { font-weight: bold } /* Keyword */
-.highlight .o { font-weight: bold } /* Operator */
-.highlight .cm { color: #998; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #999; font-weight: bold } /* Comment.Preproc */
-.highlight .c1 { color: #998; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #999; font-weight: bold; font-style: italic } /* Comment.Special */
-.highlight .gd { color: #000; background-color: #fdd } /* Generic.Deleted */
-.highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #a00 } /* Generic.Error */
-.highlight .gh { color: #999 } /* Generic.Subheading */
-.highlight .gi { color: #000; background-color: #dfd } /* Generic.Inserted */
-.highlight .go { color: #888 } /* Generic.Output */
-.highlight .gp { color: #555 } /* Generic.Prompt */
-.highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #aaa } /* Generic.Subheading */
-.highlight .gt { color: #a00 } /* Generic.Traceback */
-.highlight .kc { font-weight: bold } /* Keyword.Constant */
-.highlight .kd { font-weight: bold } /* Keyword.Declaration */
-.highlight .kn { font-weight: bold } /* Keyword.Namespace */
-.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
-.highlight .kr { font-weight: bold } /* Keyword.Declaration */
-.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
-.highlight .m { color: #099 } /* Literal.Number */
-.highlight .s { color: #d14 } /* Literal.String */
-.highlight .na { color: #008080 } /* Name.Attribute */
-.highlight .nb { color: #0086B3 } /* Name.Builtin */
-.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
-.highlight .no { color: #008080 } /* Name.Constant */
-.highlight .ni { color: #800080 } /* Name.Entity */
-.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
-.highlight .nn { color: #555555 } /* Name.Namespace */
-.highlight .nt { color: #000080 } /* Name.Tag */
-.highlight .nv { color: #008080 } /* Name.Variable */
-.highlight .ow { font-weight: bold } /* Operator.Word */
-.highlight .w { color: #bbb } /* Text.Whitespace */
-.highlight .mf { color: #099 } /* Literal.Number.Float */
-.highlight .mh { color: #099 } /* Literal.Number.Hex */
-.highlight .mi { color: #099 } /* Literal.Number.Integer */
-.highlight .mo { color: #099 } /* Literal.Number.Oct */
-.highlight .sb { color: #d14 } /* Literal.String.Backtick */
-.highlight .sc { color: #d14 } /* Literal.String.Char */
-.highlight .sd { color: #d14 } /* Literal.String.Doc */
-.highlight .s2 { color: #d14 } /* Literal.String.Double */
-.highlight .se { color: #d14 } /* Literal.String.Escape */
-.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
-.highlight .si { color: #d14 } /* Literal.String.Interpol */
-.highlight .sx { color: #d14 } /* Literal.String.Other */
-.highlight .sr { color: #009926 } /* Literal.String.Regex */
-.highlight .s1 { color: #d14 } /* Literal.String.Single */
-.highlight .ss { color: #990073 } /* Literal.String.Symbol */
-.highlight .bp { color: #999 } /* Name.Builtin.Pseudo */
-.highlight .vc { color: #008080 } /* Name.Variable.Class */
-.highlight .vg { color: #008080 } /* Name.Variable.Global */
-.highlight .vi { color: #008080 } /* Name.Variable.Instance */
-.highlight .il { color: #099 } /* Literal.Number.Integer.Long */
-
-/* コードブロック全体の枠と背景 */
+/* 4. シンタックスハイライト (Rouge) */
 .highlight {
   background: #f8f8f8;
   border: 1px solid #e1e4e8;
@@ -164,21 +87,21 @@ input {
   margin-bottom: 16px;
   line-height: 1.45;
 }
-
-/* コード内のフォント設定 */
 .highlight pre {
   margin: 0;
-  word-break: normal;
-  white-space: pre;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 85%;
 }
+.highlight .c { color: #998; font-style: italic }
+.highlight .k { font-weight: bold; color: #d73a49 } /* Pythonキーワードを赤に */
+.highlight .s { color: #032f62 } /* 文字列を青に */
+.highlight .nf { color: #6f42c1 } /* 関数名を紫に */
+/* ...（他のRougeスタイルもこの下に続きますが、主要なものを調整しました） */
 
-/* インラインコード（本文中の ` `）も整える */
+/* インラインコード */
 code {
   padding: 0.2em 0.4em !important;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(27,31,35,0.05);
-  border-radius: 3px;
+  font-size: 85% !important;
+  background-color: rgba(27,31,35,0.05) !important;
+  border-radius: 3px !important;
 }
