@@ -1,16 +1,14 @@
 title: Haruto's Page
-
-# ナビゲーションリンクを生成しない
 header_pages: []
-
-# Markdown設定
 markdown: kramdown
-
-# _config.yml に追記
 kramdown:
   syntax_highlighter: rouge
 
-# プラグイン
+# --- ここを修正 ---
+baseurl: ""  # 空（ダブルクォーテーションのみ）にする
+url: "https://futon362.github.io"
+# ------------------
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
