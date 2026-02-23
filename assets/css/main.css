@@ -51,7 +51,7 @@ a:hover {
   font-weight:300;
   line-height:54px;
   float:left;
-  color:#424242;
+  color:#424242 !important;
   text-decoration:none !important
 }
 .page-content {
