@@ -1,0 +1,14 @@
+﻿# CSS License and Attribution\n\nassets/css/main.css には以下のオープンソーススタイルが含まれています。
+
+- Minima (GitHub, Inc.) - MIT License
+- Rouge (Jean-Philippe Aumasson and others)
+- MIT License
+- 追加のカスタムスタイル（Section 2）は futon362 による変更で、Apache License 2.0 に基づきます。
+
+## 免責と使用条件
+
+MITおよびApache 2.0ライセンスはそれぞれ元ライセンスの条項に従います。
+
+- Minima: https://github.com/jekyll/minima/blob/master/LICENSE.md
+- Rouge: https://github.com/rouge-ruby/rouge/blob/main/LICENSE
+- Apache 2.0: https://www.apache.org/licenses/LICENSE-2.0

@@ -199,3 +199,14 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+# CSSスタイルの帰属とライセンス
+
+assets/css/main.css には以下のオープンソーススタイルが含まれています。
+
+- Minima (GitHub, Inc.) - MIT License
+- Rouge (Jean-Philippe Aumasson and others) - MIT License
+- 追加のカスタムスタイル（Section 2）は futon362 による変更で、Apache License 2.0 に基づきます。
+
+詳細は `LICENCE/CSS-LICENSE` を参照してください。
+

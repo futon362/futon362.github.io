@@ -1,0 +1,52 @@
+﻿# futon362.github.io
+
+このリポジトリは、`futon362`の個人サイト（GitHub Pages公開の静的サイト）です。\
+Jekyllで構築されており、プログラミング学習メモやDiscordサーバーのルールなどをまとめています。
+
+## 🔎 プロジェクト構成
+
+- `index.html` - トップページ
+- `_config.yml` - Jekyll設定
+- `_layouts/default.html` - 共通レイアウト
+- `_includes/head.html` - headタグ共通
+- `assets/css/main.css` - CSS
+- `kind_of_articles/` - カテゴリ別記事
+- `convert.py` - MarkdownからHTMLを生成する簡易スクリプト（`.gitignore`で除外されることがあります）
+- `LICENCE/LICENCE` - ライセンス文
+
+## 🧭 使い方
+
+### 1) ローカルで確認
+- `index.html`をブラウザで開いて確認
+- Jekyll環境がある場合は `bundle exec jekyll serve` で `http://127.0.0.1:4000/` を開く
+
+### 2) 記事を編集・追加
+- 既存ページ：`kind_of_articles/<カテゴリ>/index.html` や各記事HTMLを直接編集
+- 新規記事：`kind_of_articles/<カテゴリ>/articles/` にHTMLを追加
+- 新カテゴリ：ディレクトリを作成し、`index.html`を作成
+
+### 3) MarkdownをHTML化
+- `convert.py` を使うと `.md` から `.html` を生成できます
+
+```powershell
+python convert.py
+```
+
+> 注意: `.gitignore`に `convert.py` が含まれているため、Git管理下に入れたくない場合はそのままでも構いません。
+
+## 📦 GitHub Pages公開
+
+- `main` (または設定したブランチ) を更新すると公開が反映されます。
+- `_config.yml` の `baseurl: ""` はルート公開を前提にしています。サブパス公開時は変更してください。
+
+## 📝 ライセンス
+
+- 本リポジトリのライセンスは `LICENCE/LICENCE` に記載されています。
+- CSSスタイルのライセンス（Minima / Rouge / カスタム）の詳細は `LICENCE/CSS-LICENSE` を参照してください。
+
+---
+
+## 📌 補足
+
+- `.gitignore` では `_site/`, `.sass-cache/`, `.jekyll-cache/`, `.jekyll-metadata`, `.bundle/`, `vendor/`, `convert.py` を無視しています。
+- もし `convert.py` をバージョン管理したい場合は `.gitignore` から削除してください。
